@@ -13,7 +13,7 @@
     <!-- Header -->
     <header class="app-header">
       <h1 class="app-title">Lendly</h1>
-      <span class="badge" id="member-badge">Not signed in</span>
+      <span class="badge" id="member-badge" style="cursor: pointer;" title="Click to view account">Not signed in</span>
     </header>
 
     <!-- Tabs (switch views with data-view) -->
@@ -45,7 +45,7 @@
 
         <p class="empty hidden" id="loading">Loading books…</p>
         <p class="empty hidden" id="no-results">No books match your search. Try a different title or author.</p>
-        <p class="empty hidden" id="load-error">Couldn't load books. Check your connection and try again.</p>
+        <p class="empty hidden" id="load-error">Couldn't load books. Check your connection and try again.<br><button class="btn secondary" id="retry-books" type="button" style="margin-top: 12px;">Retry</button></p>
       </section>
 
       <!-- ============ MY LOANS ============ -->
@@ -61,6 +61,8 @@
         <!-- JS fills this with loans (clone #loan-template) -->
         <ul class="loan-list" id="loan-list"></ul>
 
+        <p class="empty hidden" id="loading-loans">Loading your loans…</p>
+        <p class="empty hidden" id="loans-error">Couldn't load loans. Check your connection and try again.</p>
         <p class="empty hidden" id="no-loans">You have no borrowed books. Browse the catalogue to borrow one.</p>
       </section>
 
